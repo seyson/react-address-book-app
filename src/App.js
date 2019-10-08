@@ -89,16 +89,16 @@ class App extends Component {
   };
 
   render() {
-    const searchStyle = {
-
-    };
     return (
       <div className="App">
         <Container>
-          <input style={searchStyle}
-            type="text"
-            value={this.state.searchPhrase}
-            onChange={this.handleSearchChange} />
+          <div className="form-inline d-flex flex-row-reverse">
+            <input className="form-control"
+              type="text"
+              placeholder="Search"
+              value={this.state.searchPhrase}
+              onChange={this.handleSearchChange} />
+          </div>
           <header className="App-header text-center">
             <h1>React Address Book</h1>
           </header>
