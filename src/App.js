@@ -3,7 +3,6 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import ListContacts from './ListContacts.js';
 import {generate} from 'randomstring';
 
@@ -96,6 +95,38 @@ class App extends Component {
             closer={(key, e) =>
               window.confirm("Are you sure you want to delete this contact?") && this.deleteContactHandler(key, e)}>
           </ListContacts>
+          <div style={{"margin-top": 20}} className="p-4 border border-dark">
+            <h2 className="text-left">Add a Contact</h2>
+            <Form className="text-left" onSubmit={this.addContactHandler}>
+              <Form.Group controlId="formContact">
+              <Form.Label>First Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter First Name"
+                  value={this.state.formFirstName}
+                  onChange={(e) => this.setState({formFirstName: e.target.value})} />
+                  <Form.Label>Last Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter Last Name"
+                  value={this.state.formLastName}
+                  onChange={(e) => this.setState({formLastName: e.target.value})} />
+                  <Form.Label>Birthday</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter Birthday"
+                  value={this.state.formBirthday}
+                  onChange={(e) => this.setState({formBirthday: e.target.value})} />
+                  <Form.Label>Telephone</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter Telephone"
+                  value={this.state.formTelephone}
+                  onChange={(e) => this.setState({formTelephone: e.target.value})} />
+              </Form.Group>
+              <Button variant="primary" type="submit"><i class="fa fa-plus"></i> Add Contact</Button>
+            </Form>
+          </div>
         </Container>
       </div>
     );
