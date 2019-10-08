@@ -55,7 +55,8 @@ class App extends Component {
     "formFirstName": '',
     "formLastName": '',
     "formBirthday": '',
-    "formTelephone": ''
+    "formTelephone": '',
+    "searchPhrase": ''
   }
 
   addContactHandler = (event) => {
@@ -83,10 +84,22 @@ class App extends Component {
     this.setState({"contacts": contacts});
   }
 
+  handleSearchChange = (event) => {
+    this.setState({searchPhrase: event.target.value});
+    
+  };
+
   render() {
+    const searchStyle = {
+
+    };
     return (
       <div className="App">
         <Container>
+          <input style={searchStyle}
+            type="text"
+            value={this.state.searchPhrase}
+            onChange={this.handleSearchChange} />
           <header className="App-header text-center">
             <h1>React Address Book</h1>
           </header>

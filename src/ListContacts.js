@@ -7,10 +7,8 @@ function ListContacts(props) {
   let contactsList = contacts.map((item) =>
       <Card key={item.key}>
         <Card.Body className="text-left">
-        <Card.Title>
-          <h5>{item.firstName} {item.lastName}</h5></Card.Title>
-        <Card.Subtitle>
-          <h6 className="mb-1 text-muted">born {item.birthday}</h6></Card.Subtitle>
+        <Card.Title><h5>{item.firstName} {item.lastName}</h5></Card.Title>
+        <Card.Subtitle><h6 className="mb-1 text-muted">born {item.birthday}</h6></Card.Subtitle>
         <Card.Text>Telephone: {item.telephone}</Card.Text>
         <span>
           <i key={item.key}
