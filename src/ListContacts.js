@@ -11,8 +11,7 @@ function ListContacts(props) {
           <h5>{item.firstName} {item.lastName}</h5></Card.Title>
         <Card.Subtitle>
           <h6 className="mb-1 text-muted">born {item.birthday}</h6></Card.Subtitle>
-        <Card.Text>
-          <p>Telephone: {item.telephone}</p></Card.Text>
+        <Card.Text>Telephone: {item.telephone}</Card.Text>
         <span>
           <i key={item.key}
             className="fa fa-trash-o text-danger"

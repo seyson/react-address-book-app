@@ -95,7 +95,7 @@ class App extends Component {
             closer={(key, e) =>
               window.confirm("Are you sure you want to delete this contact?") && this.deleteContactHandler(key, e)}>
           </ListContacts>
-          <div style={{"margin-top": 20}} className="p-4 border border-dark">
+          <div style={{"marginTop": 20}} className="p-4 border border-dark">
             <h2 className="text-left">Add a Contact</h2>
             <Form className="text-left" onSubmit={this.addContactHandler}>
               <Form.Group controlId="formContact">
@@ -124,7 +124,7 @@ class App extends Component {
                   value={this.state.formTelephone}
                   onChange={(e) => this.setState({formTelephone: e.target.value})} />
               </Form.Group>
-              <Button variant="primary" type="submit"><i class="fa fa-plus"></i> Add Contact</Button>
+              <Button variant="primary" type="submit"><i className="fa fa-plus"></i> Add Contact</Button>
             </Form>
           </div>
         </Container>
