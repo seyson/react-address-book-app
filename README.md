@@ -1,3 +1,7 @@
+This is an address book app for storing personal contacts (names, telephone numbers, birthdays). The user can add and delete contacts and search (filter) the working contact list. It uses React and React-Bootstrap.
++ one stateful class component renders only stateless functional components (one component manages state while another renders a UI)
++ the user can affect state in a way that directly determines how the UI is rendered (what the user types in the search bar is assigned to a state variable, and the UI reflects the change)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
