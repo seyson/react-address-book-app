@@ -4,7 +4,12 @@ import Card from 'react-bootstrap/Card';
 
 function ListContacts(props) {
   let contacts = [...props.contacts];
-  let contactsList = contacts.map((item) =>
+  let contactsList = contacts.filter(contact => {
+      for(let k in contact)
+        if (contact[k].toLowerCase().indexOf(props.filterPhrase.toLowerCase()) !== -1)
+          return true;
+      return false;
+    }).map((item) =>
       <Card key={item.key}>
         <Card.Body className="text-left">
         <Card.Title><h5>{item.firstName} {item.lastName}</h5></Card.Title>

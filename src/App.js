@@ -86,7 +86,6 @@ class App extends Component {
 
   handleSearchChange = (event) => {
     this.setState({searchPhrase: event.target.value});
-    
   };
 
   render() {
@@ -105,6 +104,7 @@ class App extends Component {
           </header>
           <ListContacts
             contacts={this.state.contacts}
+            filterPhrase={this.state.searchPhrase}
             closer={(key, e) =>
               window.confirm("Are you sure you want to delete this contact?") && this.deleteContactHandler(key, e)}>
           </ListContacts>
